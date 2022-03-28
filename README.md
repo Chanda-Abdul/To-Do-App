@@ -1,70 +1,228 @@
-# Getting Started with Create React App
+# Frontend Mentor - [Todo app Solution](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Design preview for the Todo app Solution coding challenge](./design/desktop-preview.jpg)
 
-## Available Scripts
+## Summary
 
-In the project directory, you can run:
+This is a solution to the [Frontend Mentor](https://www.frontendmentor.io) challenge to recreate the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+<!-- 
+I built this project to practice my <b>React</b> skills. -->
 
-### `npm start`
+## Table of contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+<!-- ### Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] View the optimal layout for each page depending on their device's screen size
+  - [x] Mobile First
+  - [x] Tablet
+  - [x] Desktop
+- [ ] See hover states for all interactive elements throughout the site
+  - [x] Buttons
+  - [ ] Social Media Icons
+- [x] **Bonus**: Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin -->
 
-### `npm run build`
+## Screenshots
+<!-- 
+### Desktop
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- #### Mobile
+##### `<Home/>`
+<img src="./screens/mobile1-1.png" alt="" width="200"/>
+<img src="./screens/mobile1-2.png" alt="" width="200"/>
+<img src="./screens/mobile1-3.png" alt="" width="200"/>
+<img src="./screens/mobile1-4.png" alt="" width="200"/>
+<img src="./screens/mobile1-5.png" alt="" width="200"/>
+##### `<Location/>` with  [Leaflet JS](https://leafletjs.com/) Map
+<img src="./screens/mobile2-1.png" alt="" width="200"/>
+<img src="./screens/mobile2-2.png" alt="" width="200"/>
+<img src="./screens/mobile2-3.png" alt="" width="200"/> -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- #### Tablet
+<img src="./screens/tablet1.png" alt="" width="200"/>
+<img src="./screens/tablet2.png" alt="" width="200"/>
+<img src="./screens/tablet3.png" alt="" width="200"/>
+<img src="./screens/tablet4.png" alt="" width="200"/> -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `<Home/>`
 
-### `npm run eject`
+<img src="./screens/desktop1.png" alt="" width="600"/>
+<img src="./screens/desktop2.png" alt="" width="600"/>
+<img src="./screens/desktop3.png" alt="" width="600"/>
+<img src="./screens/desktop4.png" alt="" width="600"/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `<Location/>` with [Leaflet JS](https://leafletjs.com/) Map
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./screens/desktop5.png" alt="" width="600"/>
+<img src="./screens/desktop6.png" alt="" width="600"/> -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Links
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- - <b>Solution URL:</b> [View Solution here](https://www.frontendmentor.io/solutions/modern-art-gallery-w-react-styled-components-leafletjs-and-sass-siAf_gMZ8)
+- <b>Live Site URL:</b> [View live site here](https://friendly-benz-de5b74.netlify.app/) -->
 
-## Learn More
+## My process
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Built with
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- - <b>[React](https://reactjs.org/)</b> - JavaScript Framework
+- <b>[React Styled Components](https://styled-components.com/)</b> - For styles
+- <b>[Leaflet JS](https://leafletjs.com/)</b> - Interactive Map Library
+- <b>Sass/CSS</b>
+- <b>Flexbox</b>
+- <b>Mobile-first workflow</b>
+  - Mobile breakpoint: 375px
+  - Tablet beakpoint: 768px
+  - Desktop breakpoint: 1275px -->
 
-### Code Splitting
+### What I learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- - This is my first project using [React Styled Components](https://styled-components.com/). I started building this project, and once I came to the `<Footer/>` I realized that the `background-color` and the font `color` of the footer would change depending on which page is being rendered.  So I did some research and <b>Styled Components</b> are a great solution for this issue. Overall, I really enjoyed working with <b>Styled Components</b> because they helped me organize my <b>CSS</b> styles, and quickly incorporate <b>responsive media queries</b>.
+    - I used `props` to send `background-color` and font `color` to the `<Footer/>`. Also, figuring out how to conditionally change the color of an `<svg/>` with `props` was extremely challenging😣.
+    
+    <b>in `<Footer/>`</b>
+    ````
+    <FooterStyled
+        bgcolor={props.bgcolor}
+        color={props.color}
+        activecolor={props.activeColor}
+      >
+    ````
 
-### Analyzing the Bundle Size
+    in the <b>parent component</b>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ````
+    <Footer 
+      bgcolor="var(--almost-black)" 
+      color="var(--white)" 
+      activeColor="var(--gold)"
+    />
+    ````
+    and the <b>styled component</b>
+    ````
+    background-color: ${({ bgcolor }) => 
+      bgcolor || "var(--almost-black)"};
+    color: ${({ color }) => 
+      color || "var(--white)"};
+    ````
 
-### Making a Progressive Web App
+    <b>`<Footer/>` in the `<Home/>` component</b>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    <img src="./screens/mobile1-5.png" alt="" width="300"/>
 
-### Advanced Configuration
+    <b>`<Footer/>` in the `<Location/>` component</b>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    <img src="./screens/mobile2-3.png" alt="" width="300"/>
 
-### Deployment
+- This is also one of the first projects where I used <b>Sass</b>. <b>Sass</b> is great, because it allows you to create resuable variables for fonts, colors, etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  The given <b>Figma</b> specs for colors
 
-### `npm run build` fails to minify
+  <img src="./screens/colors.png" alt="" />
+    
+  And the <b>Sass/CSS</b> I came up with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    ````
+    :root {
+    /* color palette */
+    --gold: hsl(24, 56%, 63%);
+    --almost-black: hsl(0, 0%, 8%);
+    --almost-grey: hsl(0, 0%, 27%);
+    --white: hsl(0, 0%, 100%);
+    }
+    ````
+   and I incorporated these colors into the <b>Styled Components</b> using
+    ````
+    color: var(--gold);
+    color: var(--almost-black);
+    color: var(--almost-grey);
+    color: var(--white);
+    ````
+    
+    The given <b>Figma</b> specs for fonts
+
+  <img src="./screens/fonts.png" alt="" />
+
+    And the <b>Sass/CSS</b> I came up with
+
+    ````
+    /* fonts */
+    @mixin heading-xl {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 96px;
+    line-height: 88px;
+    text-transform: uppercase;
+    }
+    @mixin heading-l {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 70px;
+    line-height: 70px;
+    text-transform: uppercase;
+    }
+    @mixin heading-m {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 60px;
+    line-height: 50px;
+    text-transform: uppercase;
+    }
+    @mixin heading-s {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    }
+    @mixin body-m {
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+    }
+    @mixin body-s {
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    }
+
+    /* mobile */
+    .title {
+    @include heading-m;
+    }
+    ````
+- I also played around with active states and stylings for the `<Button/>` 
+
+  <b>Inactive</b>
+
+  <img src="./screens/button1.png" alt="" width="200"/>
+
+  <b>Active</b>
+
+  <img src="./screens/button2.png" alt="" width="200"/> -->
+
+## Continued development
+
+<!-- - [ ] I would like to review the Social Media Icon active state color changes, they don't seem to be working at the moment. 
+- [ ] Maybe add some additional pages. -->
+
+## Useful resources
+
+<!-- - [StackOverflow](https://stackoverflow.com/) - This project would not be possible without <b>StackOverflow</b>. 🤣
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) - MDN was a great reasource for whatever <b>CSS</b> issues I encountered. -->
+
+## Author
+
+- Frontend Mentor - [@Chanda-Abdul](https://www.frontendmentor.io/profile/Chanda-Abdul)
+- Website - [Chanda Codes](https://chandacodes.com/)
+- GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)

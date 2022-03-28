@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, GlobalStyles } from "./styles/themes.js";
+import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import TaskFilter from "./components/TaskFilter";
+import TaskList from "./components/TaskList";
+import Input from "./components/Input.js";
+import { StyledApp } from "./styles/App.Styled.js";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles />
+
+        <StyledApp>
+          <Header theme={theme} setTheme={setTheme} className="content" />
+          <Input />
+          <TaskList />
+          <TaskFilter />
+          <Footer />
+        </StyledApp>
+      </ThemeProvider>
+    </>
   );
 }
 
