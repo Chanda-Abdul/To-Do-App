@@ -9,10 +9,11 @@ const Header = ({ theme, setTheme }) => {
   };
   return (
     <HeaderStyled>
-      <div>
-        <h1>ToDo {" "}<span onClick={() => themeToggler()}>
-          {theme === "light" ? <FaMoon /> : <FaSun />}
-        </span></h1>
+      <div className="title">
+        <h1>ToDo </h1>
+        <span className="theme-toggle" onClick={() => themeToggler()}>
+          {theme === "light" ? <FaMoon className="icon"/> : <FaSun className="icon"/>}
+        </span>
         
       </div>
     </HeaderStyled>

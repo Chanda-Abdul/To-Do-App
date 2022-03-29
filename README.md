@@ -22,17 +22,23 @@ I built this project to practice my <b>React</b> skills. -->
 - [Author](#author)
 
 ## Overview
-
-<!-- ### Users should be able to:
-
-- [x] View the optimal layout for each page depending on their device's screen size
-  - [x] Mobile First
-  - [x] Tablet
-  - [x] Desktop
-- [ ] See hover states for all interactive elements throughout the site
-  - [x] Buttons
-  - [ ] Social Media Icons
-- [x] **Bonus**: Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin -->
+### Users should be able to:
+- [ ] View the optimal layout for each page depending on their device's screen size
+  - [ ] Mobile First
+  - [ ] Tablet
+  - [ ] Desktop
+- [ ] See hover states for all interactive elements throughout the page
+  <!-- - [ ] Buttons
+  - [ ] Social Media Icons -->
+- [x] Add new todos to the list
+- [ ] Mark todos as complete
+- [ ] Delete todos from the list
+- [ ] Filter by all/active/complete todos
+- [ ] Clear all completed todos
+- [x] Toggle light and dark mode
+- [ ] **Bonus**: Drag and drop to reorder items on the list
+<!-- Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin  -->
+- [ ] **Bonus**: Build this project as a full-stack application
 
 ## Screenshots
 <!-- 
@@ -56,17 +62,17 @@ I built this project to practice my <b>React</b> skills. -->
 <img src="./screens/tablet3.png" alt="" width="200"/>
 <img src="./screens/tablet4.png" alt="" width="200"/> -->
 
-### `<Home/>`
+<!-- ### `<Home/>`
 
 <img src="./screens/desktop1.png" alt="" width="600"/>
 <img src="./screens/desktop2.png" alt="" width="600"/>
 <img src="./screens/desktop3.png" alt="" width="600"/>
-<img src="./screens/desktop4.png" alt="" width="600"/>
+<img src="./screens/desktop4.png" alt="" width="600"/> -->
 
-### `<Location/>` with [Leaflet JS](https://leafletjs.com/) Map
+<!-- ### `<Location/>` with [Leaflet JS](https://leafletjs.com/) Map
 
 <img src="./screens/desktop5.png" alt="" width="600"/>
-<img src="./screens/desktop6.png" alt="" width="600"/> -->
+<img src="./screens/desktop6.png" alt="" width="600"/>  -->
 
 ## Links
 
@@ -217,6 +223,9 @@ I built this project to practice my <b>React</b> skills. -->
 - [ ] Maybe add some additional pages. -->
 
 ## Useful resources
+- [React JS Tutorial | Dark Mode Toggle Using Styled Components](https://www.youtube.com/watch?v=G00V4tRx1ME&t=373s)
+- [Styled Components Crash Course](https://www.youtube.com/watch?v=02zO0hZmwnw)
+<!-- - [React JS Tutorial | Dark Mode Toggle Using Styled Components](https://www.youtube.com/watch?v=G00V4tRx1ME&t=373s) -->
 
 <!-- - [StackOverflow](https://stackoverflow.com/) - This project would not be possible without <b>StackOverflow</b>. 🤣
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) - MDN was a great reasource for whatever <b>CSS</b> issues I encountered. -->
