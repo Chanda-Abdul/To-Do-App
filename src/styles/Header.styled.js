@@ -6,7 +6,9 @@ export const HeaderStyled = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 20px;
+    max-width: 100vw;
+    margin: 25px 30px 5px 30px;
+    /* height: 200px; */
   }
 
   h1 {
@@ -25,6 +27,13 @@ export const HeaderStyled = styled.div`
     }
     &:active {
       transform: scale(0.8);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .title {
+      max-width: 80vw;
+      /* margin: 30px 30px 5px 30px; */
     }
   }
 `;

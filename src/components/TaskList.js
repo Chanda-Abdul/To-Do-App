@@ -17,41 +17,41 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
     <>
       <TaskListStyled>
         <div className="task-wrapper">
-          <div className="listed-task">
-            {currentTasks && (<ul>{currentTasks.map((task)=> {
-              return (<div className="task-complete-wrapper">
-                <li>
-  {!task.check ? (
-                        <input
-                          type="radio"
-                          name="completed"
-                          value="completed"
-                          checked={task.checked}
-                          className="task-complete"
-                          // onChange={!task.checked}
-                        />
+          {currentTasks && (
+            <ul>
+              {currentTasks.map((task) => {
+                return (
+                  <div className="listed-task">
+                    <li>
+                      {!task.checked ? (
+                        <>
+                          <input
+                            type="radio"
+                            name="completed"
+                            value="completed"
+                            checked={task.checked}
+                            className="task-complete"
+                            // onChange={!task.checked}
+                          />
+                          {task.task}
+                        </>
                       ) : (
-                        <BsFillCheckCircleFill className="check-gradient" />
+                        <>
+                          <BsFillCheckCircleFill className="check-gradient" />
+                          <div className="completed">{task.task}</div>
+                        </>
                       )}
-
-                      {task.task}
+                      {/* display this upon hover */}
                       <ImCross
                       //  onClick={removeTask(key)}
-                      /></li>
-              </div>)
-            })}</ul>)}
-            
-
-              {/* {currentTasks && (currentTasks.map((task) => {
-                return (
-                  <div className="task-complete-wrapper">
-                   
+                      />
                     </li>
-                  </div>)
-          
-              })} */}
-            
-          </div>
+                  </div>
+                );
+              })}
+            </ul>
+          )}
+
           <TaskSummary taskList={taskList} setTaskList={setTaskList} />
 
           <TaskFilter

@@ -37,9 +37,8 @@ I built this project to practice my <b>React</b> skills. -->
 - [ ] Clear all completed todos
 - [x] Toggle light and dark mode
 - [ ] **Bonus**: Drag and drop to reorder items on the list
-<!-- Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin  -->
 - [ ] **Bonus**: Build this project as a full-stack application
-
+<!-- Use [Leaflet JS](https://leafletjs.com/) to create an interactive location map with custom location pin  -->
 ## Screenshots
 <!-- 
 ### Desktop

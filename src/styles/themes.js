@@ -49,6 +49,7 @@ export const darkTheme = {
 
 export const GlobalStyles = createGlobalStyle`
 body {
+  
     background-color: ${(props) => props.theme.body};
     color: ${(props) => props.theme.fontColor};
     margin: 0;
@@ -56,25 +57,28 @@ body {
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     font-size:18px;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     transition: 1s ease;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
     align-items: center;
     width: 100vw;
     /* min-height: 100vh; */
     color: ${(props) => props.theme.fontColor};
+    transition: 1s ease;
 }
 
 .content{
     width: 90%;
     max-width: 500px;
     margin-top: 7vw;
-   
+    transition: 1s ease;
 }
 ul{
   list-style: none;
@@ -94,7 +98,10 @@ h1, h2, h3 h4, h5, h6 {
     font-family: 'Josefin Sans', sans-serif;
     /* font-weight: 700; */
 }
-
+.drag-message{
+  display: flex;
+  justify-content: center;
+}
 .attribution {
   position: fixed;
   padding: 0 10px;

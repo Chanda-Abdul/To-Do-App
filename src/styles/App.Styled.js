@@ -10,5 +10,7 @@ export const AppStyled = styled.div`
 
   @media (min-width: 768px) {
     background-image: url(${(props) => props.theme.imageDesktop});
+    height: 300px;
+
   }
 `;

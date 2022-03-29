@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-    <div>
-    <h2>Drag and drop to reorder</h2>
+    <div className='drag-message'>
+    <h2 >Drag and drop to reorder</h2>
     </div>
     
     <section class="attribution">
