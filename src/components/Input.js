@@ -33,18 +33,17 @@ const Input = ({ taskList, setTaskList }) => {
       <InputStyled>
         <div>
           <form className="add-task-form" onSubmit={addNewTask}>
-            <label
+            <button
               aria-label="add new task"
               type="submit"
               className="input-selector"
-            ></label>
+            ></button>
             <input
               type="text"
               aria-label="Create a new task..."
               placeholder="Create a new task..."
               value={newTask}
               onChange={(e) => setNewTask(e.target.value)}
-    
               required
             />
           </form>

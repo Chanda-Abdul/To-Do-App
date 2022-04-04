@@ -12,21 +12,21 @@ const TaskFilter = ({taskFilter, setTaskFilter}) => {
   return (
     <>
     <div className='task-filter'>
-      <button 
+      <div 
       aria-label='All'
       value="all"
-      className='filter-options'
+      className='filter-options .all'
       onClick={updateFilter('all')}
-      >All</button>
-      <button
+      >All</div>
+      <div
       aria-label='Active'
       value="active"
-      className='filter-options'
-      onClick={updateFilter('active')}>Active</button>
-      <button aria-label='Completed'
+      className='filter-options .active'
+      onClick={updateFilter('active')}>Active</div>
+      <div aria-label='Completed'
       value="completed"
-      className='filter-options'
-      onClick={updateFilter('completed')}>Completed</button>
+      className='filter-options .completed'
+      onClick={updateFilter('completed')}>Completed</div>
     </div>
     </>
     

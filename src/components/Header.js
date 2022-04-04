@@ -1,6 +1,6 @@
 import React from "react";
-// import Input from "./Input";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
+import {HiMoon} from 'react-icons/hi'
 import { HeaderStyled } from "../styles/Header.styled";
 
 const Header = ({ theme, setTheme }) => {
@@ -12,7 +12,7 @@ const Header = ({ theme, setTheme }) => {
       <div className="title">
         <h1>ToDo </h1>
         <span className="theme-toggle" onClick={() => themeToggler()}>
-          {theme === "light" ? <FaMoon className="icon"/> : <FaSun className="icon"/>}
+          {theme === "light" ? <HiMoon className="icon"/> : <FaSun className="icon"/>}
         </span>
         
       </div>

@@ -7,23 +7,24 @@ export const HeaderStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     max-width: 100vw;
-    margin: 25px 30px 5px 30px;
-    /* height: 200px; */
+    margin: 25px auto 5px auto;
+    padding: 0 10vw;
+    color: hsl(0, 0%, 98%);
   }
 
   h1 {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: 1.5em;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 0.5em;
+    font-weight: 600;
   }
 
   .icon {
-    color: ${(props) => props.theme.fontColor};
-    font-size: clamp(1.6rem, 2.5vw, 3rem);
+    font-size: 1.5em;
     cursor: pointer;
     &:hover {
       color: ${(props) => props.theme.hoverColor};
-      animation: circle 1s forwards;
+      /* animation: circle 1s forwards; */
     }
     &:active {
       transform: scale(0.8);
@@ -32,8 +33,8 @@ export const HeaderStyled = styled.div`
 
   @media (min-width: 768px) {
     .title {
-      max-width: 80vw;
-      /* margin: 30px 30px 5px 30px; */
+      width: 50vw;
+      margin: 25px auto 5px auto;
     }
   }
 `;

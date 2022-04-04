@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { TaskListStyled } from "../styles/TaskList.styled";
 import TaskFilter from "./TaskFilter";
 import TaskSummary from "./TaskSummary";
-import { ImCross } from "react-icons/im";
+import { GrClose } from "react-icons/gr";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
@@ -25,6 +25,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                     <li>
                       {!task.checked ? (
                         <>
+                         <div className="task-name">
                           <input
                             type="radio"
                             name="completed"
@@ -32,8 +33,8 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                             checked={task.checked}
                             className="task-complete"
                             // onChange={!task.checked}
-                          />
-                          {task.task}
+                          />{task.task}
+                         </div>
                         </>
                       ) : (
                         <>
@@ -42,9 +43,12 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                         </>
                       )}
                       {/* display this upon hover */}
-                      <ImCross
+                      <div className="delete">
+                      <GrClose className="delete-icon"
                       //  onClick={removeTask(key)}
                       />
+                      </div>
+                      
                     </li>
                   </div>
                 );
@@ -54,12 +58,13 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
 
           <TaskSummary taskList={taskList} setTaskList={setTaskList} />
 
-          <TaskFilter
+          
+        </div>
+        <TaskFilter
             taskList={taskList}
             taskFilter={taskFilter}
             setTaskFilter={setTaskFilter}
           />
-        </div>
       </TaskListStyled>
     </>
   );

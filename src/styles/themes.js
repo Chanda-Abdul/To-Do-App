@@ -7,14 +7,16 @@ import { createGlobalStyle } from "styled-components";
 // };
 
 export const lightTheme = {
-  body: "hsl(0, 0%, 98%)",
+  body:"hsl(236, 33%, 92%)", 
+  backgroundColor: "hsl(0, 0%, 98%)",
   fontColor: "hsl(235, 19%, 35%)",
-  borderColor: "hsl(235, 19%, 35%)",
+  borderColor: "hsl(233, 11%, 84%)",
   hoverColor: "hsl(236, 33%, 92%)",
   contentColor: "hsl(233, 11%, 84%)",
   summaryColor: "hsl(236, 9%, 61%)",
   completedColor: "hsl(236, 33%, 92%)",
   outlineColor: "hsl(220, 98%, 61%)",
+  gradientBackground: "linear-gradient(135deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%)100%)",
   shadowColor: "hsl(233, 11%, 84%)",
   imageMobile: "./images/bg-mobile-light.jpg",
   imageDesktop: "./images/bg-desktop-light.jpg",
@@ -28,6 +30,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   body: "hsl(235, 21%, 11%)",
+  backgroundColor: "hsl(235, 24%, 19%)",
   fontColor: "hsl(234, 39%, 85%)",
   borderColor: "hsl(237, 14%, 26%)",
   hoverColor: "hsl(236, 33%, 92%)",
@@ -35,7 +38,9 @@ export const darkTheme = {
   summaryColor: "hsl(233, 14%, 35%)",
   completedColor: "hsl(234, 39%, 85%)",
   outlineColor: "hsl(220, 98%, 61%)",
-  shadowColor: "hsl(234, 11%, 52%)",
+  shadowColor: "hsl(235, 24%, 19%)",
+  gradientBackground: "linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
+  
   imageMobile: "./images/bg-mobile-dark.jpg",
   imageDesktop: "./images/bg-desktop-dark.jpg",
   // $darkThemeVeryDarkBlue: hsl(235, 21%, 11%);
@@ -58,71 +63,103 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-size:18px;
     min-height: 100vh;
+    /* max-height: fit-content; */
     transition: 1s ease;
 }
 
-main {
+/* main {
     display: flex;
     flex-direction: column;
-    display: flex;
-  flex-direction: column;
   justify-content: space-between;
     align-items: center;
     width: 100vw;
     /* min-height: 100vh; */
-    color: ${(props) => props.theme.fontColor};
-    transition: 1s ease;
-}
+    /* color: ${(props) => props.theme.fontColor}; */
+    /* transition: 1s ease; */
+    /* font-size: 18px; */
+/* } */ 
 
-.content{
+/* .content{
     width: 90%;
     max-width: 500px;
     margin-top: 7vw;
     transition: 1s ease;
-}
+} */
 ul{
   list-style: none;
 }
 
-button, li {
+/* li {
   outline-color: ${(props) => props.theme.outlineColor};
-}
+} */
 
 p {
     font-family: 'Josefin Sans', sans-serif;
     /* font-weight: 400; */
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 h1, h2, h3 h4, h5, h6 {
     font-family: 'Josefin Sans', sans-serif;
-    /* font-weight: 700; */
+   
+    font-weight: 700;
 }
+
 .drag-message{
   display: flex;
+  align-items: center;
   justify-content: center;
+  width: 80vw;
+  font-weight: 400;
+  font-size: .75em;
+  color: ${(props) => props.theme.summaryColor};
+  letter-spacing: -0.25px;
+  margin: 3em auto;
+  /* padding-bottom:5em; */
+    background-color: transparent;
+    
+    transition: 1s ease;
+    /* padding: 5em; */
 }
 .attribution {
-  position: fixed;
-  padding: 0 10px;
-  text-align: center;
-  font-size: 10px;
-  /* font-weight: 200; */
-  width: 100vw;
-  bottom: 0;
+  position: static;
   display: flex;
-  flex-direction: column;
+  /* justify-content: space-evenly; */
+  padding: 10px;
+  text-align: center;
+  font-size: .75em;
+  font-weight: 200;
+  width: 100%;
+  bottom: 0;
+  line-height: .25em;
+  /* margin: 1em; */
+  /* flex-direction: column; */
   justify-content: center;
-  box-shadow: 0px -5px 5px ${(props) => props.theme.shadowColor};;
-  background-color: ${(props) => props.theme.body};
-  color: ${(props) => props.theme.fontColor};
+   background-color: transparent;
+  color: ${(props) => props.theme.summaryColor};
   a {
     color: ${(props) => props.theme.outlineColor};
+  }
+  & p {
+   
   }
   > h3 {
     letter-spacing: .4px; 
     opacity: 1;
   }
- 
 }
+
+@media (min-width: 768px) {
+  body{
+    font-size:24px;
+  }
+    
+  }
+
+  @media (min-width: 1275px) {
+  body{
+    font-size:36px;
+  }
+    
+  }
 `;

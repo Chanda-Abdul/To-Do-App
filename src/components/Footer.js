@@ -1,18 +1,27 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
     <>
-    <div className='drag-message'>
-    <h2 >Drag and drop to reorder</h2>
-    </div>
-    
-    <section class="attribution">
-          <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
-          <p>Coded  by  <a href="https://www.frontendmentor.io/profile/#">Chanda Abdul</a>. </p>
-        </section> 
-    </>
-  )
-}
+      <div className="drag-message">
+        <p>Drag and drop to reorder list</p>
+      </div>
 
-export default Footer
+      <section class="attribution">
+        <p>
+          Challenge by{" "}
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          .
+        </p>
+        <p>
+          Coded by{" "}
+          <a href="https://www.frontendmentor.io/profile/#">Chanda Abdul</a>.{" "}
+        </p>
+      </section>
+    </>
+  );
+};
+
+export default Footer;
