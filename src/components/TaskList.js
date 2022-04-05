@@ -23,26 +23,26 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
     })
 
   }
-  useEffect(() => {
-    // const queried = query(collection(store, 'taskItem'))
-    // const unsub = 
-    onSnapshot(store(collection, 'taskItem'), (snapshot)=> {
-      let tempTaskList = []
-      snapshot.docs.forEach((doc) => {
-        tempTaskList.push({...doc.data(), id: doc.id})
-      })
-      setFbTaskList(tempTaskList)
-    })
+  // useEffect(() => {
+  //   // const queried = query(collection(store, 'taskItem'))
+  //   // const unsub = 
+  //   onSnapshot(store(collection, 'taskItem'), (snapshot)=> {
+  //     let tempTaskList = []
+  //     snapshot.docs.forEach((doc) => {
+  //       tempTaskList.push({...doc.data(), id: doc.id})
+  //     })
+  //     setFbTaskList(tempTaskList)
+  //   })
     
-      const completed = taskList.filter((task) => task.checked)
-      let completeTasks = []
-      completed.forEach(task => {
-        completeTasks.push(task)
-      })
-      //setComplete(completedTasks)
-      console.log(completeTasks)
+  //     const completed = taskList.filter((task) => task.checked)
+  //     let completeTasks = []
+  //     completed.forEach(task => {
+  //       completeTasks.push(task)
+  //     })
+  //     //setComplete(completedTasks)
+  //     console.log(fbTaskList)
 
-  }, [taskList]);
+  // }, [fbTaskList]);
 
   return (
     <>

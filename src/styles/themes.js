@@ -53,6 +53,7 @@ export const darkTheme = {
 };
 
 export const GlobalStyles = createGlobalStyle`
+
 body {
   
     background-color: ${(props) => props.theme.body};
@@ -63,40 +64,13 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-size:18px;
     min-height: 100vh;
-    /* max-height: fit-content; */
+
     transition: 1s ease;
 }
 
-/* main {
-    display: flex;
-    flex-direction: column;
-  justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    /* min-height: 100vh; */
-    /* color: ${(props) => props.theme.fontColor}; */
-    /* transition: 1s ease; */
-    /* font-size: 18px; */
-/* } */ 
 
-/* .content{
-    width: 90%;
-    max-width: 500px;
-    margin-top: 7vw;
-    transition: 1s ease;
-} */
 ul{
   list-style: none;
-}
-
-/* li {
-  outline-color: ${(props) => props.theme.outlineColor};
-} */
-
-p {
-    font-family: 'Josefin Sans', sans-serif;
-    /* font-weight: 400; */
-    /* font-size: 18px; */
 }
 
 h1, h2, h3 h4, h5, h6 {
@@ -115,16 +89,16 @@ h1, h2, h3 h4, h5, h6 {
   color: ${(props) => props.theme.summaryColor};
   letter-spacing: -0.25px;
   margin: 3em auto;
-  /* padding-bottom:5em; */
+
     background-color: transparent;
     
     transition: 1s ease;
-    /* padding: 5em; */
+ 
 }
 .attribution {
   position: static;
   display: flex;
-  /* justify-content: space-evenly; */
+  
   padding: 10px;
   text-align: center;
   font-size: .75em;

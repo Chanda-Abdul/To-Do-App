@@ -10,14 +10,14 @@ const Footer = () => {
       <section class="attribution">
         <p>
           Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          <a href="https://www.frontendmentor.io?ref=challenge" >
             Frontend Mentor
           </a>
           .
         </p>
         <p>
           Coded by{" "}
-          <a href="https://www.frontendmentor.io/profile/#">Chanda Abdul</a>.{" "}
+          <a href="https://www.frontendmentor.io/profile">Chanda Abdul</a>.
         </p>
       </section>
     </>

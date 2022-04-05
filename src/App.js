@@ -5,10 +5,11 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
-import Input from "./components/Input.js";
-import { AppStyled } from "./styles/App.styled.js";
+import Input from "./components/Input";
+
 // import firebase from "./firebase.js";
 import starterList from './data.json'
+import {StyledApp } from "./styles/App.styled";
 
 function App() {
   const defaultTaskList = localStorage.getItem("TaskList") ? JSON.parse(localStorage.getItem("TaskList")) : [...starterList]
@@ -24,7 +25,9 @@ function App() {
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <AppStyled>
+        <StyledApp>
+        
+      
           <Header theme={theme} setTheme={setTheme} className="content" />
           <Input taskList={taskList} setTaskList={setTaskList} />
           <TaskList
@@ -35,7 +38,8 @@ function App() {
           />
 
           <Footer />
-        </AppStyled>
+         
+          </StyledApp>
       </ThemeProvider>
     </>
   );

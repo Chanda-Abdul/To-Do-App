@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AppStyled = styled.div`
+export const StyledApp = styled.div`
   background-image: url(${(props) => props.theme.imageMobile});
   background-repeat: none;
   position: absolute;
