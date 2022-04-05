@@ -1,17 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { TaskListStyled } from "../styles/TaskList.styled";
 import TaskFilter from "./TaskFilter";
 import TaskSummary from "./TaskSummary";
 import { GrClose } from "react-icons/gr";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import {collection, query, onSnapshot, doc, updateDoc, deleteDoc, QuerySnapshot} from 'firebase/firestore'
+import {store} from '../firebase'
 
 const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
+  const [fbTaskList, setFbTaskList] = useState([])
+  
   let currentTasks = taskList;
 
-  // const  removeTask = (key)=>{
+  const removeTask = async (task)=>{
+    await deleteDoc(doc(store, "taskItem", task.id))
 
-  // }
-  useEffect(() => {}, [taskList]);
+  }
+
+  const toggleTaskComplete = async(task)=> {
+    await updateDoc(doc(store, "taskItem", task.id), {
+      checked: !task.checked
+    })
+
+  }
+  useEffect(() => {
+    // const queried = query(collection(store, 'taskItem'))
+    // const unsub = 
+    onSnapshot(store(collection, 'taskItem'), (snapshot)=> {
+      let tempTaskList = []
+      snapshot.docs.forEach((doc) => {
+        tempTaskList.push({...doc.data(), id: doc.id})
+      })
+      setFbTaskList(tempTaskList)
+    })
+    
+      const completed = taskList.filter((task) => task.checked)
+      let completeTasks = []
+      completed.forEach(task => {
+        completeTasks.push(task)
+      })
+      //setComplete(completedTasks)
+      console.log(completeTasks)
+
+  }, [taskList]);
 
   return (
     <>
@@ -22,7 +53,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
               {currentTasks.map((task) => {
                 return (
                   <div className="listed-task">
-                    <li>
+                    <li key={task.id}>
                       {!task.checked ? (
                         <>
                          <div className="task-name">
@@ -32,7 +63,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                             value="completed"
                             checked={task.checked}
                             className="task-complete"
-                            // onChange={!task.checked}
+                            onChange={toggleTaskComplete(task)}
                           />{task.task}
                          </div>
                         </>
@@ -45,7 +76,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                       {/* display this upon hover */}
                       <div className="delete">
                       <GrClose className="delete-icon"
-                      //  onClick={removeTask(key)}
+                       onClick={removeTask(task)}
                       />
                       </div>
                       

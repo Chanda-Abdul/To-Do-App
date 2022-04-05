@@ -224,6 +224,7 @@ I built this project to practice my <b>React</b> skills. -->
 ## Useful resources
 - [React JS Tutorial | Dark Mode Toggle Using Styled Components](https://www.youtube.com/watch?v=G00V4tRx1ME&t=373s)
 - [Styled Components Crash Course](https://www.youtube.com/watch?v=02zO0hZmwnw)
+- [What is Firebase? The complete story, abridged.](https://medium.com/firebase-developers/what-is-firebase-the-complete-story-abridged-bcc730c5f2c0)
 <!-- - [React JS Tutorial | Dark Mode Toggle Using Styled Components](https://www.youtube.com/watch?v=G00V4tRx1ME&t=373s) -->
 
 <!-- - [StackOverflow](https://stackoverflow.com/) - This project would not be possible without <b>StackOverflow</b>. 🤣
@@ -234,3 +235,22 @@ I built this project to practice my <b>React</b> skills. -->
 - Frontend Mentor - [@Chanda-Abdul](https://www.frontendmentor.io/profile/Chanda-Abdul)
 - Website - [Chanda Codes](https://chandacodes.com/)
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
+
+
+<!-- TO-DO
+- hover states
+- mobile styles
+- tablet styles
+- desktop styles
+- filter 
+  all
+  active
+  complete
+- clear list
+- mark complete
+- delete
+- drag drop w dnd react
+- how long will firebase persist?
+
+ -->
+

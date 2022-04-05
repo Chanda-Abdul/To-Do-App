@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import Input from "./components/Input.js";
 import { AppStyled } from "./styles/App.styled.js";
+// import firebase from "./firebase.js";
 import starterList from './data.json'
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [taskList, setTaskList] = useState(defaultTaskList);
   const [taskFilter, setTaskFilter] = useState("all");
+
+// const ref = firebase.firestore().collection("taskItem")
+// console.log(ref)
   
 
   return (

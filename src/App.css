@@ -1,3 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap");
-
+:root {
+  /* color palette */
+  --lightThemeVeryLightGray: hsl(0, 0%, 98%);
+  --lightThemeVeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --lightThemeLightGrayishBlue: hsl(233, 11%, 84%);
+  --lightThemeDarkGrayishBlue: hsl(236, 9%, 61%);
+  --lightThemeVeryDarkGrayishBlue: hsl(235, 19%, 35%);
+  --darkThemeVeryDarkBlue: hsl(235, 21%, 11%);
+  --darkThemeVeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --darkThemeLightGrayishBlue: hsl(234, 39%, 85%);
+  --darkThemeDarkGrayishBlue: hsl(234, 11%, 52%);
+  --darkThemeVeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --darkThemeVeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
 /*# sourceMappingURL=App.css.map */
