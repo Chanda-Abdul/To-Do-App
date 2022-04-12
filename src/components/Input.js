@@ -8,7 +8,7 @@ const Input = ({ taskList, setTaskList }) => {
   const createNewTask = (e) => {
     e.preventDefault();
     const task = {
-      id: taskList.length + 1,
+      taskId: taskList.length + 1,
       task: newTask,
       checked: false,
     };

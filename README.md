@@ -32,9 +32,9 @@ I built this project to practice my <b>React</b> skills. -->
   - [ ] Social Media Icons -->
 - [x] Add new todos to the list
 - [ ] Mark todos as complete
-- [ ] Delete todos from the list
+- [x] Delete todos from the list
 - [ ] Filter by all/active/complete todos
-- [ ] Clear all completed todos
+- [x] Clear all completed todos
 - [x] Toggle light and dark mode
 - [ ] **Bonus**: Drag and drop to reorder items on the list
 - [ ] **Bonus**: Build this project as a full-stack application

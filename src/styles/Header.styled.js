@@ -16,7 +16,7 @@ export const HeaderStyled = styled.div`
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .icon {

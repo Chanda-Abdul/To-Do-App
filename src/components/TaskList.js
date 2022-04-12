@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import { TaskListStyled } from "../styles/TaskList.styled";
 import TaskFilter from "./TaskFilter";
 import TaskSummary from "./TaskSummary";
+import ToDoItem from "./ToDoItem";
 import { GrClose } from "react-icons/gr";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
-
 const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
-  const [fbTaskList, setFbTaskList] = useState([])
-  
+  const [fbTaskList, setFbTaskList] = useState([]);
+
   let currentTasks = taskList;
+  console.log(taskList);
 
   // const removeTask = async (task)=>{
   //   await deleteDoc(doc(store, "taskItem", task.id))
@@ -24,7 +25,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
   // }
   // useEffect(() => {
   //   // const queried = query(collection(store, 'taskItem'))
-  //   // const unsub = 
+  //   // const unsub =
   //   onSnapshot(store(collection, 'taskItem'), (snapshot)=> {
   //     let tempTaskList = []
   //     snapshot.docs.forEach((doc) => {
@@ -32,7 +33,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
   //     })
   //     setFbTaskList(tempTaskList)
   //   })
-    
+
   //     const completed = taskList.filter((task) => task.checked)
   //     let completeTasks = []
   //     completed.forEach(task => {
@@ -47,54 +48,28 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
     <>
       <TaskListStyled>
         <div className="task-wrapper">
-          {currentTasks && (
-            <ul>
-              {currentTasks.map((task) => {
-                return (
-                  <div className="listed-task">
-                    <li key={task.id}>
-                      {!task.checked ? (
-                        <>
-                         <div className="task-name">
-                          <input
-                            type="radio"
-                            name="completed"
-                            value="completed"
-                            checked={task.checked}
-                            className="task-complete"
-                            // onChange={toggleTaskComplete(task)}
-                          />{task.task}
-                         </div>
-                        </>
-                      ) : (
-                        <>
-                          <BsFillCheckCircleFill className="check-gradient" />
-                          <div className="completed">{task.task}</div>
-                        </>
-                      )}
-                      {/* display this upon hover */}
-                      <div className="delete">
-                      <GrClose className="delete-icon"
-                      //  onClick={removeTask(task)}
-                      />
-                      </div>
-                      
-                    </li>
-                  </div>
-                );
-              })}
-            </ul>
-          )}
-
+          {/* {console.log(currentTasks)} */}
+          {currentTasks.length > 0 &&
+            currentTasks.map(({ taskId, task, checked }, index) => {
+              // console.log(taskId, task, checked, index);
+              return (
+                <ToDoItem
+                  taskId={taskId}
+                  index={index}
+                  checked={checked}
+                  task={task}
+                  taskList={taskList} setTaskList={setTaskList}
+                />
+              );
+            })}
           <TaskSummary taskList={taskList} setTaskList={setTaskList} />
-
-          
         </div>
+
         <TaskFilter
-            taskList={taskList}
-            taskFilter={taskFilter}
-            setTaskFilter={setTaskFilter}
-          />
+          taskList={taskList}
+          taskFilter={taskFilter}
+          setTaskFilter={setTaskFilter}
+        />
       </TaskListStyled>
     </>
   );

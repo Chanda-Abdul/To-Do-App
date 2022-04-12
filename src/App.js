@@ -14,7 +14,7 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [taskList, setTaskList] = useState(defaultTaskList);
   const [taskFilter, setTaskFilter] = useState("all");
-// console.log(taskList)
+// console.log(taskList
   return (
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
