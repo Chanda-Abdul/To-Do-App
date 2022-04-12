@@ -1,23 +1,12 @@
 import React, { useState } from "react";
 import { InputStyled } from "../styles/Input.styled";
-import { store } from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
+
 
 const Input = ({ taskList, setTaskList }) => {
   const [newTask, setNewTask] = useState("");
   const [newTaskId, setNewTaskId] = useState(0);
 
-  const addNewTask = async (e) => {
-    e.preventDefault();
-    if(newTask !== ""){
-      await addDoc(collection(store, "taskItem"), {
-        task: newTask,
-        check: false,
-        id: newTaskId
-      })
-      setNewTaskId(newTaskId + 1)
-      setNewTask("")
-    }
+
     // setNewTask(e.target.value);
     // console.log(newTask);
     // const task = {
@@ -27,7 +16,7 @@ const Input = ({ taskList, setTaskList }) => {
     // };
     // updateTaskListInLocalStorage(task)
     // setNewTask("");
-  };
+  
 
   // const updateTaskListInLocalStorage = (task) => {
   //   let updatedTaskList =
@@ -44,7 +33,9 @@ const Input = ({ taskList, setTaskList }) => {
     <>
       <InputStyled>
         <div>
-          <form className="add-task-form" onSubmit={addNewTask}>
+          <form className="add-task-form" 
+          // onSubmit={addNewTask}
+          >
             <button
               aria-label="add new task"
               type="submit"

@@ -4,25 +4,24 @@ import TaskFilter from "./TaskFilter";
 import TaskSummary from "./TaskSummary";
 import { GrClose } from "react-icons/gr";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import {collection, query, onSnapshot, doc, updateDoc, deleteDoc, QuerySnapshot} from 'firebase/firestore'
-import {store} from '../firebase'
+
 
 const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
   const [fbTaskList, setFbTaskList] = useState([])
   
   let currentTasks = taskList;
 
-  const removeTask = async (task)=>{
-    await deleteDoc(doc(store, "taskItem", task.id))
+  // const removeTask = async (task)=>{
+  //   await deleteDoc(doc(store, "taskItem", task.id))
 
-  }
+  // }
 
-  const toggleTaskComplete = async(task)=> {
-    await updateDoc(doc(store, "taskItem", task.id), {
-      checked: !task.checked
-    })
+  // const toggleTaskComplete = async(task)=> {
+  //   await updateDoc(doc(store, "taskItem", task.id), {
+  //     checked: !task.checked
+  //   })
 
-  }
+  // }
   // useEffect(() => {
   //   // const queried = query(collection(store, 'taskItem'))
   //   // const unsub = 
@@ -63,7 +62,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                             value="completed"
                             checked={task.checked}
                             className="task-complete"
-                            onChange={toggleTaskComplete(task)}
+                            // onChange={toggleTaskComplete(task)}
                           />{task.task}
                          </div>
                         </>
@@ -76,7 +75,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                       {/* display this upon hover */}
                       <div className="delete">
                       <GrClose className="delete-icon"
-                       onClick={removeTask(task)}
+                      //  onClick={removeTask(task)}
                       />
                       </div>
                       
