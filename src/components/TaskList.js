@@ -48,6 +48,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
     <>
       <TaskListStyled>
         <div className="task-wrapper">
+          <ul>
           {/* {console.log(currentTasks)} */}
           {currentTasks.length > 0 &&
             currentTasks.map(({ taskId, task, checked }, index) => {
@@ -62,6 +63,7 @@ const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
                 />
               );
             })}
+            </ul>
           <TaskSummary taskList={taskList} setTaskList={setTaskList} />
         </div>
 

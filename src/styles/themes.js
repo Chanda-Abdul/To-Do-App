@@ -65,7 +65,7 @@ body {
     font-size:18px;
     min-height: 100vh;
 
-    transition: 1s ease;
+    transition: 1s ease-in-out;
 }
 
 

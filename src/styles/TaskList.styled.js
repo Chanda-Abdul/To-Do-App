@@ -3,18 +3,20 @@ import styled from "styled-components";
 export const TaskListStyled = styled.div`
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
   align-items: center;
   color: ${(props) => props.theme.contentColor};
   margin: auto;
+ 
 
   .task-wrapper {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-
+    justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-
+    /* height: 100%; */
     width: 75vw;
     margin: 20px auto;
     border-radius: 5px;
@@ -29,7 +31,9 @@ export const TaskListStyled = styled.div`
   ul {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     padding: 0;
+    height: 100%;
   }
 
   li {
@@ -55,7 +59,7 @@ export const TaskListStyled = styled.div`
     cursor: pointer;
     width: 100%;
     padding: 5px;
-    margin: auto;
+    margin: 5px;
     letter-spacing: -0.25px;
     color: ${(props) => props.theme.fontColor};
   }
