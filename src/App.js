@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import Input from "./components/Input";
 import starterList from "./data.json";
-import { StyledApp } from "./styles/App.styled.js";
+import { StyledApp } from "./styles/App.Styled.js";
 
 function App() {
   const defaultTaskList = localStorage.getItem("TaskList")? JSON.parse(localStorage.getItem("TaskList")): [...starterList];
