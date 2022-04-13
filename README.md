@@ -76,7 +76,7 @@ I built this project to practice my <b>React</b> skills. -->
 ## Links
 
 <!-- <!-- - <b>Solution URL:</b> [View Solution here](https://www.frontendmentor.io/solutions/modern-art-gallery-w-react-styled-components-leafletjs-and-sass-siAf_gMZ8) -->
-- <b>Live Site URL:</b> [View live site here](https://funny-choux-b6ee29.netlify.app/) -->
+- <b>Live Site URL:</b> [View live site here](https://funny-choux-b6ee29.netlify.app/)
 
 ## My process
 
