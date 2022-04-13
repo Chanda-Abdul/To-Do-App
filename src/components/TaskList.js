@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { TaskListStyled } from "../styles/TaskList.styled";
 import TaskFilter from "./TaskFilter";
 import TaskSummary from "./TaskSummary";
 import ToDoItem from "./ToDoItem";
-import { GrClose } from "react-icons/gr";
-import { BsFillCheckCircleFill } from "react-icons/bs";
+
 
 const TaskList = ({ taskList, setTaskList, taskFilter, setTaskFilter }) => {
-  const [fbTaskList, setFbTaskList] = useState([]);
+  // const [fbTaskList, setFbTaskList] = useState([]);
 
   let currentTasks = taskList;
   console.log(taskList);
