@@ -217,7 +217,7 @@ I built this project to practice my <b>React</b> skills. -->
   <img src="./screens/button2.png" alt="" width="200"/> -->
 
 ## Continued development
-- [ ] Implement <b>GraphQL</b> to make this project a full-stack application
+- [ ] Implement <b>GraphQL</b>, <b>Firebase</b> or <b>[json-server](https://www.npmjs.com/package/json-server)</b> to make this project a full-stack application
 <!-- - [ ] I would like to review the Social Media Icon active state color changes, they don't seem to be working at the moment. 
 - [ ] Maybe add some additional pages. -->
 

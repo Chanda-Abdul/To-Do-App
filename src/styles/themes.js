@@ -125,14 +125,14 @@ h1, h2, h3 h4, h5, h6 {
 
 @media (min-width: 768px) {
   body{
-    font-size:20px;
+    font-size:1.1em;
   }
     
   }
 
   @media (min-width: 1275px) {
   body{
-    font-size:28px;
+    font-size:1.2em;
   }
     
   }
